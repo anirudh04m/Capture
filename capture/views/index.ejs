@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="container">
+   <div class="jumbotron" style="background: #ccffff ;">
+	<h1 id="heading" style="text-align:center; padding-top:30px;"><i class="fa fa-camera"></i> Capture</h1>
+	<h4 id="heading" style="text-align:center;">See the world through my page</h4>
+   </div>
+
+ 
+  <div class="row">
+      <% photos.forEach(function(photo){ %>
+    <div class="col-lg-4 col-sm-6">
+    	<div class="thumbnail">
+    	<img src="<%= photo.image %>">
+    	<div class="caption">
+            <p><%= photo.title%></p>
+            </div>
+            <div class="meta">
+                    <p><%= photo.created.toDateString() %></p>
+                </div>
+        </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<% include ./partials/footer %>
