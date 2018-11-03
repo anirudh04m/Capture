@@ -1,0 +1,30 @@
+<% include ./partials/lheader %>
+
+
+ 
+ 
+ <div class = "container" style="margin-top:65px;">
+     <h1 style="text-align:center;margin-bottom:20px;">Capture</h1>
+     <div>
+           <img id="showp" src="<%=photo.image %>">
+ <div class="caption">
+     <h4 style="position:absolute;left:355px; margin-top:20px;"><%= photo.title %></h4>
+ </div>
+ <div class="caption">
+     <h4 style="position:absolute;left:355px; margin-top:20px;"><%= photo.comments %></h4>
+ </div>
+     </div>
+     
+     
+     <form action="/capture/<%= photo.id %>" method="POST">
+     <label>Comment</label>
+     <div><input type="text" name ="comment" placeholder="Comment"</div>
+     <input type="submit">
+     </form>
+ </div>
+ 
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<% include ./partials/footer %>

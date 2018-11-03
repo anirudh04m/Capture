@@ -1,0 +1,63 @@
+#heading{
+	text-align: center;
+}
+
+.jumbotron{
+	background: #ccffff ;
+}
+
+.thumbnail {
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon {
+   font-size: 2em;    
+}
+
+.container.main{
+    margin-top: 7.0em ;
+}
+
+#deleted {
+    display: inline ;
+}
+
+#pic {
+    position: absolute;
+    top:290px;
+    right:20px;
+}
+
+#log {
+   position: fixed;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+
+#more {
+    float: right;
+    position: absolute;
+    top:250px;
+    right:20px;
+}
+
+#showp {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    display: block;
+}
