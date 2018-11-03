@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+<style>
+    body{
+        background-image:url("https://images.pexels.com/photos/8395/lights-night-unsharp-blured.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+    }
+</style>
+<div class="ui main text container segment" id='log'>
+    <div class="ui huge header">Login</div>
+    <form class="ui form" action="/login" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="uname" placeholder="Username">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="pwd" placeholder="Password">        
+        </div>
+        <input type="submit" class="ui purple basic button">
+    </form>
+</div>
+
+
+
+<% include ./partials/footer %>

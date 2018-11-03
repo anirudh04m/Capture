@@ -1,0 +1,35 @@
+<% include ./partials/lheader %>
+
+
+ 
+ 
+ <div class = "container" style="margin-top:65px;">
+     <h1 style="text-align:center;margin-bottom:20px;">Capture</h1>
+     <div>
+           <img id="showp" src="<%=photo.image %>">
+ <div class="caption">
+     <h4 style="position:absolute;left:355px; margin-top:20px;"><%= photo.title %></h4>
+ </div>
+    
+ </div>
+ <div id="comment" style=" position:relative;margin: 0 auto; width:50%; border:3px solid #95DBFE; margin-top:80px;">
+ <p style=" background:#FFF17B; font-size: 20px; padding-left:10px; margin-top:10px; font-family: "Times New Roman", Times, serif; ">Comments:</p>
+  <% photo.comments.forEach(function(comment){ %>
+     <div class="caption">
+     <p style="background:#E9E8E8; margin-bottom:10px;padding-left:10px;"><%= comment.text %></p>
+ </div>
+ <% }) %>
+     
+ <a href="/capture/<%= photo._id %>/comments/new" class="ui blue basic button" style="margin: 0 0 10px 200px;" >Add new comment </a>
+ </div>
+    
+ </div>
+ 
+
+
+     
+     
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<% include ./partials/footer %>
