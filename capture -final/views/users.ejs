@@ -1,0 +1,78 @@
+<% include ./partials/lheader %>
+
+<style>
+    body {
+	font-family: Roboto;
+  background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* W3C */
+}
+
+#to {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+
+
+.do {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+.do:nth-child(2n){
+	background: #f7f7f7;
+}
+
+
+
+.do:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+
+
+#container {
+	width: 360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+
+.
+</style>
+
+<div id="container">
+	<h1>Users</h1>
+	<ul id="to">
+		<form action="/capture/<%=id%>/users" method="POST">
+	    <% users.forEach(function(user){ %>
+	    
+	        <% if(user.username != un){%>
+	        
+		<li style="padding-left:10px" class="do"><%=user.username%><!--<span><input type ="submit" value ="Follow" class="ui button active" style="float:right; margin-top:8px;" ></span><input type="hidden" name="follow_id" value="<%=user._id%>">--></li>
+		</form>
+	<% }%>
+	<% }) %>
+	</ul>
+	
+</div>
+
+<% include ./partials/footer %>

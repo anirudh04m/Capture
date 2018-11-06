@@ -1,0 +1,25 @@
+<% include ./partials/lheader %>
+
+<style>
+    body{
+        background-image:url("https://images.pexels.com/photos/255464/pexels-photo-255464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+    }
+</style>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Upload</div>
+    <form class="ui form" action="/capture/<%=id%>/uploads" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="photo[title]" placeholder="title">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="photo[image]" placeholder="image">        
+        </div>
+        <input type="submit" class="ui purple basic button">
+    </form>
+</div>
+
+<% include ./partials/footer %>

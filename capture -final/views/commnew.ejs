@@ -1,0 +1,21 @@
+<% include ./partials/lheader %>
+
+<style>
+    body{
+        background-image:url("https://images.pexels.com/photos/376533/pexels-photo-376533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+    }
+</style>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Comment</div>
+    <form class="ui form" action="/capture/<%= photo.id %>/comments" method="POST">
+        <div class="field">
+            <label>Comment</label>
+            <input type="text" name="comment" placeholder="Comment">
+        </div>
+        <input type="submit" class="ui purple basic button">
+    </form>
+</div>
+
+<% include ./partials/footer %>
